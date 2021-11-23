@@ -11,7 +11,8 @@ app.use(bodyparser.json());
 app.use(cors());
 app.use("/quiz", quizRoutes);
 
-const uri = process.env.MONGO_URI;
+const uri =
+  "mongodb+srv://den:den123@cluster0.rn771.mongodb.net/quiz?retryWrites=true&w=majority";
 mongoose
   .connect(uri, { useUnifiedTopology: true, useNewUrlParser: true })
   .then(() =>
